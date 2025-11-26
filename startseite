@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chicken Grill — Frisch. Saftig. Schnell.</title>
+  <meta name="description" content="Chicken Grill — Frisch gegrilltes Hähnchen, Boxen, Salate und Catering. Abholung & Lieferung. Jetzt bestellen oder anrufen." />
+  <meta name="theme-color" content="#e85a07" />
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- kleines blank favicon; gern ersetzen -->
+  <style>
+    /* Basis-Layout, modern, kein externes CSS nötig */
+    :root{
+      --accent:#e85a07;
+      --dark:#222;
+      --muted:#666;
+      --bg:#fff8f3;
+      --card:#ffffff;
+      --radius:12px;
+      --shadow: 0 8px 24px rgba(16,16,16,0.08);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#fff);color:var(--dark);line-height:1.5}
+    a{color:inherit}
+    .container{max-width:1100px;margin:0 auto;padding:0 16px}
+    header{background:var(--card);padding:18px 0;border-bottom:1px solid #eee;position:sticky;top:0;z-index:40}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#ffb84d,#ff6b00);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px}
+    .nav{display:flex;gap:12px;align-items:center}
+    .nav a{padding:8px;border-radius:8px;text-decoration:none;color:var(--muted);font-weight:600}
+    .cta{display:inline-block;padding:10px 14px;background:var(--accent);color:#fff;border-radius:10px;text-decoration:none;font-weight:800}
+    .hero{display:flex;flex-direction:column;gap:18px;padding:36px 0;align-items:flex-start}
+    h1{font-size:30px;margin:0;color:var(--dark)}
+    p.lead{color:var(--muted);margin:6px 0 0;max-width:760px}
+    .grid{display:grid;gap:18px;padding:22px 0;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));}
+    .card{background:var(--card);padding:16px;border-radius:var(--radius);box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px}
+    .price{font-weight:800;color:var(--accent);font-size:18px}
+    .img{width:100%;height:160px;border-radius:10px;object-fit:cover;background:#f6efe9}
+    .menu-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+    .small{font-size:13px;color:var(--muted)}
+    footer{padding:20px 0;color:var(--muted);font-size:14px}
+    .two-col{display:grid;grid-template-columns:1fr;gap:16px}
+    .contact-actions{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{padding:6px 10px;background:#fff;border-radius:999px;border:1px solid #f0e7e0;font-weight:700}
+    /* responsive */
+    @media(min-width:900px){
+      .hero{flex-direction:row;justify-content:space-between;align-items:center}
+      h1{font-size:42px}
+      .two-col{grid-template-columns:1fr 360px}
+    }
+    /* accessibility focus */
+    a:focus, button:focus, input:focus, textarea:focus{outline:3px solid rgba(232,90,7,0.18);outline-offset:2px}
+    /* small helpers */
+    .muted{color:var(--muted)}
+    .center{text-align:center}
+  </style>
+</head>
+<body>
+  <header aria-label="Hauptnavigation" role="banner">
+    <div class="container header-inner">
+      <div class="brand" role="img" aria-label="Chicken Grill Logo">
+        <div class="logo">CG</div>
+        <div>
+          <div style="font-weight:800">Chicken Grill</div>
+          <div style="font-size:12px;color:var(--muted)">Frisch. Saftig. Schnell.</div>
+        </div>
+      </div>
+
+      <nav class="nav" role="navigation" aria-label="Seiten-Navigation">
+        <a href="#menu">Speisekarte</a>
+        <a href="#about">Über uns</a>
+        <a href="#contact">Kontakt</a>
+        <a class="cta" href="#contact">Bestellen</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container hero" aria-labelledby="hero-title">
+      <div>
+        <h1 id="hero-title">Saftiges Grillhähnchen & schmackhafte Boxen — direkt zu dir</h1>
+        <p class="lead">Chicken Grill steht für hausgemachte Marinaden, frische Zutaten und schnellen Service. Abholung, Lieferung & Catering — einfach anrufen oder online bestellen.</p>
+        <p style="margin-top:12px">
+          <a class="cta" href="#menu">Zur Speisekarte</a>
+          <a href="tel:+494312345678" style="margin-left:8px" class="chip">Anrufen: +49 431 2345678</a>
+        </p>
+      </div>
+
+      <div style="max-width:520px">
+        <!-- Platzhalterbild: ersetze durch eigenes Bild (z. B. /images/hero.jpg) -->
+        <img src="https://images.unsplash.com/photo-1604908177522-9f41fb9c5ecf?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=5f5b2f0f047bf4d4b0f7b1a3b7b1a4d3" alt="Gegrilltes Hähnchen auf Teller" class="img" />
+      </div>
+    </section>
+
+    <section id="menu" class="container" aria-labelledby="menu-title" style="padding-top:8px">
+      <h2 id="menu-title" style="margin:12px 0">Beliebte Gerichte</h2>
+      <div class="grid" role="list">
+        <article class="card" role="listitem" aria-label="Whole Chicken">
+          <div class="menu-title"><strong>Whole Chicken</strong><span class="price">10,90 €</span></div>
+          <div class="small">Saftig gegrilltes Hähnchen, 1 Stück — Hausmarinade.</div>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Chicken Box">
+          <div class="menu-title"><strong>Chicken Box</strong><span class="price">8,90 €</span></div>
+          <div class="small">Portion Hähnchen mit Pommes & Dip.</div>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Salat mit Hähnchen">
+          <div class="menu-title"><strong>Salat mit Hähnchen</strong><span class="price">7,50 €</span></div>
+          <div class="small">Frischer Salat mit gegrillten Hähnchenstreifen.</div>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Family Meal">
+          <div class="menu-title"><strong>Family Meal (4 Pers.)</strong><span class="price">29,90 €</span></div>
+          <div class="small">2 Whole Chicken + 2 Beilagen — perfekt für Familien.</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="container" style="padding:12px 0">
+      <div class="card">
+        <h3>Über Chicken Grill</h3>
+        <p class="small">Wir sind ein familiengeführter Betrieb in Kiel mit Fokus auf Qualität: regionale Zutaten, hausgemachte Marinaden und nachhaltige Verpackungen. Catering-Angebote auf Anfrage.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="container" style="padding:12px 0">
+      <h2>Kontakt & Öffnungszeiten</h2>
+      <div class="two-col">
+        <div class="card">
+          <div><strong>Adresse</strong></div>
+          <div class="small">Musterstraße 12, 24103 Kiel</div>
+
+          <div style="height:8px"></div>
+          <div><strong>Öffnungszeiten</strong></div>
+          <div class="small">Mo–Sa 11:00–21:00 | So 12:00–20:00</div>
+
+          <div style="height:8px"></div>
+          <div><strong>Telefon</strong></div>
+          <div class="small"><a href="tel:+494312345678">+49 431 2345678</a></div>
+
+          <div style="height:8px"></div>
+          <div class="contact-actions">
+            <a class="cta" href="tel:+494312345678">Jetzt anrufen</a>
+            <a class="cta" href="mailto:bestellung@chicken-grill.de" style="background:#444">E-Mail</a>
+          </div>
+        </div>
+
+        <div class="card" aria-live="polite">
+          <h4>Nachricht / Bestellung</h4>
+          <!-- Einfaches mailto-Formular (funktioniert ohne Backend). 
+               Ersetze später durch Formspree/Netlify-Forms falls gewünscht. -->
+          <form action="mailto:bestellung@chicken-grill.de" method="post" enctype="text/plain" style="display:flex;flex-direction:column;gap:8px">
+            <label class="small">Name<input name="Name" required style="padding:8px;border-radius:8px;border:1px solid #eee" /></label>
+            <label class="small">E-Mail<input type="email" name="E-Mail" required style="padding:8px;border-radius:8px;border:1px solid #eee" /></label>
+            <label class="small">Nachricht<textarea name="Nachricht" rows="4" required style="padding:8px;border-radius:8px;border:1px solid #eee"></textarea></label>
+            <button class="cta" type="submit">Senden</button>
+            <div class="small muted">Hinweis: Dieses Formular nutzt Ihr E-Mail-Programm (mailto). Für echtes Formular empfehle ich kostenlosen Form-Handler (Anleitung auf Anfrage).</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container" role="contentinfo">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding:18px 0">
+      <div class="small">© Chicken Grill — Alle Rechte vorbehalten</div>
+      <div style="display:flex;gap:12px;align-items:center">
+        <a href="#impressum" class="small">Impressum</a>
+        <a href="#datenschutz" class="small">Datenschutz</a>
+      </div>
+    </div>
+
+    <!-- Kurz-Impressum / Datenschutzhinweis (bitte ggf. durch vollständige Texte ersetzen) -->
+    <div id="impressum" class="small" style="padding:8px;background:#fff;border-radius:8px;box-shadow:var(--shadow);margin-bottom:12px">
+      <strong>Impressum</strong><br />
+      Chicken Grill — Inhaber: Max Mustermann<br />
+      Musterstraße 12, 24103 Kiel<br />
+      Tel: +49 431 2345678<br />
+      E-Mail: bestellung@chicken-grill.de
+    </div>
+
+    <div id="datenschutz" class="small muted" style="padding:8px">
+      <strong>Datenschutz</strong><br />
+      Diese Website verwendet keine Analytik standardmäßig. Kontaktformulare senden E-Mails über das lokale E-Mail-Programm. Für eine vollständige Datenschutzerklärung stelle ich gern eine Vorlage bereit.
+    </div>
+  </footer>
+</body>
+</html>
